@@ -1,12 +1,101 @@
-
+use std::io;
 fn main(){
+
+//calculator
+    println!("enter the operation,(+,-,*,/");
+    let mut operation=String::new();
+    io::stdin().read_line(&mut operation).unwrap();
+
+    println!("enter first number");
+    let mut num1=String::new();
+    io::stdin().read_line(&mut num1).unwrap();
+    let num1:f64=num1.trim().parse().unwrap();
+
+    println!("enter secind number");
+    let mut num2=String::new();
+    io::stdin().read_line(&mut num2).unwrap();
+    let num2:f64=num2.trim().parse().unwrap();
+    
+    match operation.trim() {
+        "+"=>print!("Result: {}",num1+num2),
+        "-"=>print!("Result: {}",num1-num2),
+        "*"=>print!("Result: {}",num1*num2),
+        "/"=>{
+            if num2!=0.0{
+                print!("Result: {}",num1/num2);
+            }else {
+                print!("cannot divide by zero");
+            }
+        }
+        _ => print!("invalid operation"),
+    }
+    
     // let n=9;
     // print!("fibo of a number {} is {}",n,is_prime(n));
     // let n=434343532;
     // print!("sum of digit of number{} is{};",n,sum_of_digit(n));
     // let s="hello";
     // print!("reverse of string {} is : {}",s,reverse_digit(s));
+    // even_odd(1031);
+
+    // swapping function
+    // let(mut a,mut b)=(10,30);
+    // std::mem::swap(&mut a, &mut b);
+    // print!("a={} b={}",a,b);
+
+    // let arr = [1, 2, 3, 4, 5];
+    // print!("maximum in arr is {}",find_max(&arr));
+
+    // let arr = [1, 2, 3, 4, 5 ,-5];
+    // print!("minimum in arr is {}",min_element(&arr));
+
 }
+
+
+
+
+// fn bubble_sort(arr: &mut [i32]) {
+//     let len = arr.len();
+//     for i in 0..len {
+//         for j in 0..len-i-1 {
+//             if arr[j] > arr[j + 1] {
+//                 arr.swap(j, j + 1);
+//             }
+//         }
+//     }
+// }
+
+
+// fn min_element(arr:&[i32])->i32{
+//     let mut min=arr[0];
+//     for &item in arr{
+//         if min> item{
+//             min=item;
+//         }
+//     }
+//     min
+// }
+
+
+// fn find_max(arr: &[i32]) -> i32 {
+//     let mut max = arr[0];
+//     for &item in arr{
+//         if item > max {
+//             max = item;
+//         }
+//     }
+//     max
+// }
+
+
+
+// fn even_odd(n:u32){
+//     if n%2==0 {
+//         print!("number is even {}",n);
+//     }else{
+//         print!("number is odd {}",n);
+//     }
+// }
 
 // fn reverse_digit(s:&str)-> String{
 //     return s.chars().rev().collect()
