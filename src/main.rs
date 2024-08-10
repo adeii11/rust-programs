@@ -4,8 +4,8 @@ fn main(){
     // print!("fibo of a number {} is {}",n,is_prime(n));
     // let n=434343532;
     // print!("sum of digit of number{} is{};",n,sum_of_digit(n));
-    let s="hello";
-    print!("reverse of string {} is : {}",s,reverse_digit(s));
+    // let s="hello";
+    // print!("reverse of string {} is : {}",s,reverse_digit(s));
 }
 
 // fn reverse_digit(s:&str)-> String{
