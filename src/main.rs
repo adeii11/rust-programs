@@ -1,34 +1,70 @@
 use std::io;
+use std::cmp::Ordering;
+use rand::Rng;
 fn main(){
+    // guess number game
+    // let mut count=0;
+    // println!("wellcome to guess numbwr game");
+    // let secret_number=rand::thread_rng().gen_range(1..=100);
+    // loop {
+        // println!("please enter the number you guessed");
+        // let mut guess=String::new();
+        // io::stdin().read_line(&mut guess).expect("cannot read message");
+        // let guess:u32=match guess.trim().parse(){
+            // Ok(num)=>num,
+            // Err(_)=>{
+    //             print!("please enter a valid number");
+    //             continue;
+    //         }
+    //     };
+    //     println!("your guessed is {}",guess);
+    //     match guess.cmp(&secret_number) {
+    //         Ordering::Less => {
+    //             println!("too small");
+    //             count=count+1;
+    //         },
+    //         Ordering::Greater =>{ 
+    //         println!("too big");
+    //         count=count+1;
+    //         },
+    //         Ordering::Equal =>{
+    //             print!("You Win!");
+    //             println!("you tried {} times.",count);
+    //             break;
+    //         }
+    //     }
+    // }
+
+
 
 //calculator
-    println!("enter the operation,(+,-,*,/");
-    let mut operation=String::new();
-    io::stdin().read_line(&mut operation).unwrap();
+    // println!("enter the operation,(+,-,*,/)");
+    // let mut operation=String::new();
+    // io::stdin().read_line(&mut operation).unwrap();
 
-    println!("enter first number");
-    let mut num1=String::new();
-    io::stdin().read_line(&mut num1).unwrap();
-    let num1:f64=num1.trim().parse().unwrap();
+    // println!("enter first number");
+    // let mut num1=String::new();
+    // io::stdin().read_line(&mut num1).unwrap();
+    // let num1:f64=num1.trim().parse().unwrap();
 
-    println!("enter secind number");
-    let mut num2=String::new();
-    io::stdin().read_line(&mut num2).unwrap();
-    let num2:f64=num2.trim().parse().unwrap();
+    // println!("enter second number");
+    // let mut num2=String::new();
+    // io::stdin().read_line(&mut num2).unwrap();
+    // let num2:f64=num2.trim().parse().unwrap();
     
-    match operation.trim() {
-        "+"=>print!("Result: {}",num1+num2),
-        "-"=>print!("Result: {}",num1-num2),
-        "*"=>print!("Result: {}",num1*num2),
-        "/"=>{
-            if num2!=0.0{
-                print!("Result: {}",num1/num2);
-            }else {
-                print!("cannot divide by zero");
-            }
-        }
-        _ => print!("invalid operation"),
-    }
+    // match operation.trim() {
+    //     "+"=>print!("Result: {}",num1+num2),
+    //     "-"=>print!("Result: {}",num1-num2),
+    //     "*"=>print!("Result: {}",num1*num2),
+    //     "/"=>{
+    //         if num2!=0.0{
+    //             print!("Result: {}",num1/num2);
+    //         }else {
+    //             print!("cannot divide by zero");
+    //         }
+    //     }
+    //     _ => print!("invalid operation"),
+    // }
     
     // let n=9;
     // print!("fibo of a number {} is {}",n,is_prime(n));
